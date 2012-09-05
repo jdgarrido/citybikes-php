@@ -15,7 +15,7 @@ class CityBikes {
     }
     
     public function get_system($sys_url) {
-        $json_sys = file_get_contents($sys_url);
+        $json_sys = file_get_contents($sys_url.'?v=2');
         $aSystem = json_decode($json_sys);
         
         return $aSystem;
